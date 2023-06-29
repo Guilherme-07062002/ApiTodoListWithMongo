@@ -3,7 +3,7 @@ const { teste, adicionarTarefa, removerTarefa, listarTarefas } = require('../con
 const router = express.Router()
 
 // Testar conexão
-//router.route('/test').get(teste)
+router.route('/test').get(teste)
 
 router.route('/add_task').post(adicionarTarefa)
 router.route('/del_task/:id').delete(removerTarefa)

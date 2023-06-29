@@ -39,17 +39,10 @@ module.exports = {
         try {
             const idTarefa = request.params.id
 
-            Task.destroy({
-                where: {
-                    id: idTarefa
-                }
-            })
-                .then(numDeleted => {
-                    if (numDeleted === 1) {
+            Task.deleteOne({
+                id: idTarefa
+            }).then(()=> {
                         response.status(200).json('Tarefa excluída com sucesso');
-                    } else {
-                        response.status(400).json('Não foi possível excluir a tarefa');
-                    }
                 })
                 .catch(err => {
                     response.status(400).json('Erro ao excluir a tarefa:', err);
@@ -61,7 +54,7 @@ module.exports = {
     },
     async listarTarefas(request, response) {
         try {
-            const tarefas = await Task.findAll({})
+            const tarefas = await Task.find({})
             if (!tarefas) {
                 response.status(400).json('Nenhuma tarefa foi cadastrada.');
             }

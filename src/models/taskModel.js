@@ -1,24 +1,16 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/database");
+const mongoose = require('mongoose');
 
-class Task extends Model { }
+const taskSchema = new mongoose.Schema({
+  id: {
+    type: Number,
+    required: true,
+  },
+  descricao: {
+    type: String,
+    required: true,
+  }
+});
 
-Task.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        descricao: {
-            type: DataTypes.STRING,
-            allowNull: false
-        }
-    },
-    {
-        sequelize,
-        modelName: "Task",
-        timestamps: true
-    }
-)
-module.exports = Task
+const task = mongoose.model('task', taskSchema);
+
+module.exports = task;
