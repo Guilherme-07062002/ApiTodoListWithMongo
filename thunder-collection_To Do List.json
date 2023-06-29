@@ -1,0 +1,70 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "To Do List",
+    "dateExported": "2023-06-29T12:46:19.157Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d8850efb-3b3a-4503-bb39-447c61b16280",
+            "colId": "1500f9f1-f42b-437f-9ad6-8006a4f04870",
+            "containerId": "",
+            "name": "Create Task",
+            "url": "http://localhost:3000/add_task",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-06-29T12:11:20.481Z",
+            "modified": "2023-06-29T12:15:29.199Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 1,\n  \"descricao\": \"passear com cachorro\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "cdea9c8c-43e0-4d03-a4de-28df47f88eb2",
+            "colId": "1500f9f1-f42b-437f-9ad6-8006a4f04870",
+            "containerId": "",
+            "name": "Test",
+            "url": "http://localhost:3000/test",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-29T12:14:17.313Z",
+            "modified": "2023-06-29T12:14:17.313Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7a0c145c-4626-4693-a0e4-997f29daf6a0",
+            "colId": "1500f9f1-f42b-437f-9ad6-8006a4f04870",
+            "containerId": "",
+            "name": "Remove Task",
+            "url": "http://localhost:3000/del_task/2",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-06-29T12:26:29.582Z",
+            "modified": "2023-06-29T12:31:17.248Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "87bdd267-7432-4b62-b334-95e4ea71b5c5",
+            "colId": "1500f9f1-f42b-437f-9ad6-8006a4f04870",
+            "containerId": "",
+            "name": "Listar Tasks",
+            "url": "http://localhost:3000/list_tasks",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-29T12:32:35.507Z",
+            "modified": "2023-06-29T12:33:07.164Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
